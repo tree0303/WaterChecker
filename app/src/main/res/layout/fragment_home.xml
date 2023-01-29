@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.HomeFragment">
+<TextView
+    android:id="@+id/title_today"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:text="今日の水やり"
+    android:textColor="@color/black"
+    android:textSize="90px"
+    android:textStyle="bold"
+    android:layout_marginHorizontal="100px"/>
+
+
+    <LinearLayout
+        android:id="@+id/home_liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_today"
+        android:weightSum="3"
+        android:paddingHorizontal="20px"
+        android:layout_marginVertical="10px">
+
+        <TextView
+            android:id="@+id/home_plant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="植物名"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60px"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/home_plant_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近の日時"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/home_plant_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="回数"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60px"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_plant_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_liner"
+        tools:listitem="@layout/home_plant_item"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

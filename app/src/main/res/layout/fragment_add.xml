@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add.AddFragment"
+    android:id="@+id/found_layout">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="?android:actionBarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:background="@drawable/bottom_border"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16px"
+            android:layout_marginTop="84px"
+            android:layout_marginBottom="24px"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="新規登録"
+            android:layout_marginTop="80px"
+            android:layout_marginStart="80px"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="80px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.177">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200px"
+            android:text="登録名"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80px"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/plant_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="100px"
+            android:layout_marginTop="100px"
+            android:layout_marginBottom="100px"
+            android:background="@drawable/edittext_state"
+            android:inputType="textMultiLine"
+            android:maxLength="18"
+            android:minLines="3"
+            android:paddingHorizontal="100px"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="70px"
+            android:nextFocusDown="@id/add_btn"
+            android:imeOptions="actionDone"/>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150px"
+            android:text="登録"
+            android:background="@drawable/button_state"
+            android:backgroundTint="@null"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
